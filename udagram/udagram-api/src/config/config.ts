@@ -1,3 +1,4 @@
+import AWS from "aws-sdk";
 import * as dotenv from "dotenv";
 dotenv.config();
 
@@ -11,6 +12,10 @@ export const config = {
   password: process.env.POSTGRES_PASSWORD,
   database: process.env.POSTGRES_DB,
   host: process.env.POSTGRES_HOST,
+  dbport: Number(process.env.DB_PORT),
+  port: Number(process.env.PORT),
+  accessKeyId : process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey : process.env.AWS_SECRET_ACCESS_KEY,
   aws_region: process.env.AWS_REGION,
   aws_profile: process.env.AWS_PROFILE,
   aws_media_bucket: process.env.AWS_BUCKET,
